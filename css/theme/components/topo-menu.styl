@@ -1,0 +1,85 @@
+.topo-menu
+    .topo-menu--actived &
+        visibility: visible
+        opacity: 1
+
+    @media media-max-lg
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 100
+        visibility: hidden
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, .5)
+        opacity: 0
+        transition: all .2s ease-in-out
+
+    @media media-min-lg
+        display: contents
+
+    &__open
+        order: -1
+        padding: 0
+        width: 48px
+        height: 48px
+        background: var(--primary-contrast)
+        box-shadow: none
+        color: var(--primary)
+        font-size: 20px
+
+        &:before
+            icon('\f0c9')
+
+        span
+            display: none
+
+        &:hover
+            background: @background
+            color: @color
+
+        @media media-min-lg
+            display: none
+
+    &__close
+        position: sticky
+        top: 5px
+        right: 5px
+        z-index: 10
+        float: right
+        margin-left: auto
+        padding: 0
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        background: var(--primary-contrast)
+        box-shadow: none
+        color: var(--primary)
+        font-size: 20px
+
+        &:before
+            icon('\f00d')
+
+        &:hover
+            background: @background
+            color: @color
+
+        span
+            display: none
+
+        @media media-min-lg
+            display: none
+
+    &__container
+        overflow-y: auto
+        width: 300px
+        height: 100%
+        background: white
+        transition: all .4s ease-in-out
+        transform: translateX(-100%)
+
+        .topo-menu--actived &
+            transform: translateX(0)
+
+        @media media-min-lg
+            display: contents

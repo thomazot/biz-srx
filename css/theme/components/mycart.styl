@@ -1,0 +1,81 @@
+.mycart
+    &.on
+        z-index: 30
+
+    &__header
+        color: var(--secundary)
+
+        @media media-min-lg
+            width: 120px
+
+        .qtd
+            display: none
+
+        .ico
+            width: 39px
+            height: 30px
+
+        a
+            display: flex
+            align-items: center
+            padding: 15px 0
+            color: currentColor
+            line-height: 1
+
+            @media media-max-lg
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 48px
+                height: 48px
+                border-radius: 3px
+                background: var(--secundary)
+                color: var(--secundary-contrast)
+
+                .ico
+                    width: 25px
+                    height: 25px
+
+        .label
+            margin-left: 10px
+            font-size: 13px
+
+            @media media-max-lg
+                display: none
+
+            strong
+                font-size: 16px
+
+    &__content
+        .title
+            text-transform: uppercase
+            font-size: 14px
+
+        .std
+            font-size: 12px
+
+        @media media-max-lg
+            display: none
+
+        @media media-min-lg
+            visibility: hidden
+            overflow: visible
+            padding: 30px
+            width: 260px
+            box-shadow: inset 0 3px 0 var(--primary), inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 1rem rgba(0, 0, 0, .5)
+            opacity: 0
+            transition: all .2s ease-in-out
+
+            .mycart:hover &
+                visibility: visible
+                opacity: 1
+
+            &:before
+                position: absolute
+                bottom: 100%
+                left: 50%
+                margin-left: 18px
+                border-right: solid 8px transparent
+                border-bottom: solid 8px var(--primary)
+                border-left: solid 8px transparent
+                content: ''

@@ -1,0 +1,146 @@
+.menu-filter
+    form
+        @media media-min-lg
+            display: flex
+
+    &__field
+        padding: 5px
+
+        label
+            display: none
+
+        select
+            padding: 0 35px 0 10px
+            height: 35px
+            border: 0
+            border-radius: 3px
+            background: #fff url(select) right 10px center no-repeat
+            box-shadow: none
+            color: var(--text)
+            font-weight: bold
+            font-size: 14px
+            appearance: none
+
+            @media media-min-lg
+                min-width: 180px
+
+            &:disabled
+                opacity: .5
+
+    &__header
+        padding: 15px
+        min-width: 120px
+        font-weight: regular
+        font-size: 14px
+        line-height: 1
+        cursor: pointer
+
+        @media media-min-lg
+            padding-bottom: 30px
+
+        span, strong
+            line-height: 1
+
+        strong
+            display: block
+            color: var(--primary)
+            font-size: 16px
+
+    &__main
+        padding: 10px 0
+        background: var(--primary)
+        color: var(--primary-contrast)
+
+        @media media-max-lg
+            display: none
+
+        @media media-min-lg
+            position: absolute
+            left: 0
+            visibility: hidden
+            width: 100%
+            opacity: 0
+            transition: all .2s ease-in-out
+
+    &__label
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 10px
+        padding: 5px
+        font-weight: bold
+        font-size: 13px
+
+        a
+            color: currentColor
+
+    &__tabs
+        color: var(--text)
+
+        @media media-min-lg
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-between
+
+        select
+            box-shadow: 0 0 0 1px #e5e5e5
+
+    &__tab
+        margin: 1px
+        padding: 10px
+        background: var(--primary-contrast)
+        box-shadow: 0 0 0 1px var(--primary)
+        color: var(--text)
+        font-weight: bold
+        font-size: 14px
+        line-height: 1
+        cursor: pointer
+
+        @media media-min-lg
+            flex: 1
+            order: 1
+            min-width: 0
+
+        &--actived
+            @media media-min-lg
+                box-shadow: 0 2px 0 var(--primary-contrast), 0 -2px 0 var(--primary-contrast), 0 0 0 1px var(--primary)
+
+    &__tabs-content
+        display: none
+        padding: 5px
+        background: var(--primary-contrast)
+
+        @media media-min-lg
+            flex: 0 0 calc(100% - 1px)
+            order: 2
+
+        &--actived
+            display: block
+
+    &:hover
+        @media media-min-lg
+            .menu-filter
+                &__header
+                    background: var(--primary)
+                    color: var(--primary-contrast)
+
+                    span, strong
+                        color: currentColor
+
+                &__main
+                    visibility: visible
+                    opacity: 1
+
+        @media media-max-lg
+            .menu-filter
+                &__main
+                    display: block
+
+    &__container
+        container()
+
+        > form
+            .menu-filter__field
+                @media media-min-lg
+                    flex: 1
+                    min-width: 0

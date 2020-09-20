@@ -1,0 +1,153 @@
+.myaccount
+    &.on
+        z-index: 30
+
+    &__header
+        color: var(--secundary)
+
+        @media media-min-lg
+            width: 120px
+
+        .ico
+            width: 35px
+            height: 35px
+
+        a
+            display: flex
+            align-items: center
+            padding: 15px 0
+            color: currentColor
+            line-height: 1
+
+            @media media-max-lg
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 48px
+                height: 48px
+                border-radius: 3px
+                background: var(--secundary)
+                color: var(--secundary-contrast)
+
+                .ico
+                    width: 25px
+                    height: 25px
+
+        .label
+            margin-left: 10px
+            font-size: 13px
+
+            @media media-max-lg
+                display: none
+
+            strong
+                font-size: 16px
+
+    &__login
+        display: block
+        margin-bottom: 0
+        padding-bottom: 30px
+
+        input
+            padding-left: 10px
+            height: 28px
+            border: 0 !important
+            background: var(--gray)
+            box-shadow: none
+            font-size: 12px
+
+            &::placeholder
+                text-transform: uppercase
+
+        .fields
+            display: block
+
+        .fieldset .legend, .form-list > li:not(:last-child):not(.fields)
+            margin-bottom: 5px
+
+        .form-list .fields > *
+            padding-bottom: 5px
+
+    &__forgot
+        display: none
+
+    &__login-btn
+        bgSkew()
+
+        position: relative
+        padding: 0
+        width: 100%
+        height: 28px
+        background: none
+        box-shadow: none
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 1
+
+        span
+            position: relative
+            z-index: 1
+
+        &:after
+            z-index: 0
+            background: var(--button)
+
+    &__register
+        margin-top: 0
+        padding-top: 30px
+        border-top: solid 1px #e5e5e5
+
+        .std
+            display: contents
+            line-height: 1
+
+        h3
+            text-transform: uppercase
+            font-size: 14px
+
+        p
+            display: inline
+            text-transform: uppercase
+            font-weight: medium
+            font-size: 11px
+            line-height: 1
+
+        &-btn
+            display: inline
+            padding: 0
+            box-shadow: none
+            text-transform: uppercase
+            font-size: 11px
+            line-height: 1
+
+    &__content
+        @media media-max-lg
+            display: none
+
+        @media media-min-lg
+            visibility: hidden
+            overflow: visible
+            padding: 30px
+            width: 260px
+            box-shadow: inset 0 3px 0 var(--primary), inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 1rem rgba(0, 0, 0, .5)
+            opacity: 0
+            transition: all .2s ease-in-out
+
+            .myaccount:hover &
+                visibility: visible
+                opacity: 1
+
+            &:before
+                position: absolute
+                bottom: 100%
+                left: 50%
+                margin-left: 18px
+                border-right: solid 8px transparent
+                border-bottom: solid 8px var(--primary)
+                border-left: solid 8px transparent
+                content: ''
+
+        .title
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 14px
