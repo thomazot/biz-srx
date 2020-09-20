@@ -1,0 +1,123 @@
+.footer
+    --text: #333
+    --link: #666666
+    --whatsapp: #80cb59
+
+    @media media-max-lg
+        text-align: center
+
+    .flex--a-center
+        @media media-max-lg
+            justify-content: center
+
+    &__container
+        container()
+
+        @media media-min-lg
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+
+    &__title
+        padding-bottom: 15px
+        color: var(--primary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 16px
+
+        &--whatsapp
+            padding-bottom: 0
+            color: var(--whatsapp)
+            font-size: 14px
+
+    &__tel
+        display: block
+        color: var(--text)
+        font-weight: medium
+        font-size: 22px
+
+    &__content
+        &--whatsapp
+            padding-top: 20px
+
+            a
+                display: block
+                color: var(--link)
+                font-weight: bold
+                font-size: 14px
+
+    &__email
+        display: block
+        padding-top: 20px
+        color: var(--link)
+        font-weight: bold
+        font-size: 14px
+
+    &__filter
+        &-title
+            padding-bottom: 10px
+            color: var(--text)
+            font-size: 13px
+            line-height: 1
+
+            strong
+                display: block
+                color: var(--primary)
+                font-size: 16px
+
+        form
+            padding-bottom: 10px
+
+        select
+            display: inline-block
+            margin: 5px 0
+            padding: 0 35px 0 10px
+            width: 190px
+            height: 35px
+            border: solid 1px #e5e5e5 m
+            border-radius: 3px
+            background: #fff url(select) right 10px center no-repeat
+            box-shadow: none
+            color: var(--link)
+            font-weight: bold
+            font-size: 14px
+            appearance: none
+
+            @media media-min-lg
+                display: block
+                min-width: 180px
+
+            &:disabled
+                opacity: .5
+
+    &__box
+        padding: 10px
+
+        &--payment, &--send
+            @media media-min-lg
+                display: flex
+                align-items: center
+
+                .footer__title
+                    margin-right: 15px
+                    padding-bottom: 0
+
+    &__row
+        padding: 35px 0
+
+        &--payment-send
+            padding: 10px 0
+            border-top: solid 1px #f2f2f2
+            border-bottom: solid 1px #f2f2f2
+
+    &__copyright
+        padding: 10px 0 20px
+        color: var(--link)
+        text-align: center
+        font-weight: bold
+        font-size: 13px
+
+        p
+            &:first-child
+                color: var(--primary)
+                font-size: 14px

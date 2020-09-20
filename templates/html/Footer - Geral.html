@@ -1,0 +1,92 @@
+<div class="footer__row">
+    <div class="footer__container">
+        <div class="footer__box">
+            {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logofooter" imagem="wysiwyg/logo/srx-autoparts.svg" imagem_mobile="wysiwyg/logo/srx-autoparts.svg" alt_imagem="SRX - Autoparts" tag_html="div" tag_html_home="h3"}}
+            <div class="footer__social">
+                {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="all"}}
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__title">Central de <br />Atendimento</h3>
+            <div class="footer__content">
+                <a href="tel:1433018411" class="footer__tel"><span>(14) 3301-8411</span></a>
+                <a href="tel:1433018412" class="footer__tel"><span>(14) 3301-8412</span></a>
+
+                <div class="footer__content footer__content--whatsapp">
+                    <h4 class="footer__title footer__title--whatsapp">Whatsapp</h4>
+                    <div class="footer__content">
+                        <a href="https://api.whatsapp.com/send?phone=5514991095751">(14) 99109-5751</a>
+                        <a href="https://api.whatsapp.com/send?phone=5514991999570">(14) 99199-9570</a>
+                        <a href="https://api.whatsapp.com/send?phone=5514999198125">(14) 99919-8125</a>
+                        <a href="https://api.whatsapp.com/send?phone=5514991292702">(14) 99129-2702</a>
+                    </div>
+                </div>
+
+                <a href="mailto:contato@enutri.com.br" class="footer__email">contato@enutri.com.br</a>
+            </div>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">Categorias</h3>
+            <div class="footer__content">
+                <div class="footer__filter">
+                    <h4 class="footer__filter-title">
+                        <span>comprar por</span>
+                        <strong>veículos</strong>
+                    </h4>
+                    <form action="#">
+                        <select name="" id="">
+                            <option value="">Selecione seu veículo</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">Modelo</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">Ano</option>
+                        </select>
+                    </form>
+                    <h4 class="footer__filter-title">
+                        <span>comprar por</span>
+                        <strong>marcas</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">Tire suas Dúvidas</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-duvidas"}}
+            </div>
+        </div>
+
+        <div class="footer__box">
+            <h3 class="footer__title">Sua conta</h3>
+            <div class="footer__content">
+                {{block type="menubuilder/output" identifier="footer-conta"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__row footer__row--payment-send">
+    <div class="footer__container">
+        <div class="footer__box footer__box--payment">
+            <h3 class="footer__title">Formas de pagamento</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="payment" pagtos="all"}}
+            </div>
+        </div>
+        <div class="footer__box footer__box--send">
+            <h3 class="footer__title">Formas de envio</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_envios" template="interface/widgets/envios.phtml" identificador="send" envios="2,9"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__copyright">
+    <p>©SRX Auto Parts - 2020.</p>
+    <p>SRX Auto Parts LTDA - CNPJ: 00.000.000/0001-00 © Todos os direitos reservados. 2020</p>
+</div>
