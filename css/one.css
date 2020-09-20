@@ -12419,6 +12419,46 @@ body {
   }
 }
 
+.owl-prev,
+.owl-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--primary-contrast);
+  color: var(--primary);
+  text-indent: 0;
+}
+.owl-prev:before,
+.owl-next:before {
+  display: none;
+}
+.owl-prev .ico,
+.owl-next .ico {
+  width: 0.63rem;
+  height: 1.13rem;
+  fill: currentColor;
+}
+.cms-home .header-container + .banner .owl-pagination {
+  position: absolute;
+  bottom: 0;
+  padding: 0.63rem 0;
+  width: 100%;
+}
+.cms-home .header-container + .banner .owl-pagination .owl-page span {
+  width: 0.81rem;
+  height: 0.81rem;
+  background: var(--primary-contrast);
+  box-shadow: inset 0 0 0 3px var(--primary-contrast);
+  opacity: 1;
+}
+.cms-home .header-container + .banner .owl-pagination .owl-page.active span {
+  background: var(--primary);
+}
+
 .search__hide {
   height: 4.38rem;
   line-height: 2.5rem;

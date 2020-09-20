@@ -1251,6 +1251,14 @@ $j.fn.neonTheme.custom = {
             mode: 'prepend',
             ratio: false,
         },
+        'z-next': {
+            selector: '.owl-next',
+            mode: 'html',
+        },
+        'z-prev': {
+            selector: '.owl-prev',
+            mode: 'html',
+        },
     },
 }
 
