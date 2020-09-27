@@ -1,0 +1,39 @@
+.price-box
+    margin: 0
+
+    .regular-price, .special-price
+        .label
+            display: none
+
+        .price span
+            color: var(--primary)
+            font-weight: medium
+            font-size: 16px
+
+    .old-price
+        margin: 0
+
+        .label
+            display: none
+
+        .price span
+            color: var(--secundary-hover)
+            font-weight: regular
+            font-size: 12px
+
+.price-box-parcelado
+    .preco-parcelado
+        &:before
+            content: 'ou até '
+
+        &:after
+            content: 's/juros'
+
+        .s-juros
+            display: none
+
+        &:before, &:after, .num span, .value span, .de
+            color: var(--secundary)
+            text-transform: uppercase
+            font-weight: medium
+            font-size: 12px

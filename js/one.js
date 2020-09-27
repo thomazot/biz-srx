@@ -824,7 +824,6 @@ function default_carrossel_produtos() {
                         [568, 2],
                         [768, 3],
                         [1024, 4],
-                        [1270, 5],
                     ],
                     beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -1372,6 +1371,43 @@ $j(document)
             if ($(event.target).hasClass('topo-menu'))
                 $('body').toggleClass('topo-menu--actived')
         })
+
+        var veiculosCarosel = $j('.veiculos .banner__wrapper')
+
+        if (veiculosCarosel.length) {
+            veiculosCarosel.owlCarousel({
+                navigation: true,
+                pagination: false,
+                navigationText: ['?', '?'],
+                items: 8,
+                itemsCustom: [
+                    [0, 3],
+                    [768, 5],
+                    [1024, 8],
+                ],
+            })
+        }
+
+        var brandsCarosel = $('.marcas .brands__list')
+
+        if (brandsCarosel.length) {
+            brandsCarosel.owlCarousel({
+                itemsScaleUp: true,
+                navigation: true,
+                navigationText: ['?', '?'],
+                pagination: false,
+            })
+        }
+
+        var mycartQTD = $('.header .mycart__header .qtd')
+
+        if (mycartQTD.length) {
+            var mycartTotal = $('.header .mycart__totals')
+
+            if (mycartTotal.length) {
+                mycartTotal.append(mycartQTD)
+            }
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize

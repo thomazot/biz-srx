@@ -1,0 +1,63 @@
+.marcas
+    --border-color: #e5e5e5
+    --color: #999999
+
+    .brands
+        &__item
+            a
+                border: 0
+
+            span
+                display: none
+
+        .owl-wrapper-outer
+            border-right: 0
+
+    &__title
+        padding: 45px 0 25px
+        text-align: center
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 26px
+
+    &__footer
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 35px 0
+
+        &:before, &:after
+            flex: 1
+            min-width: 0
+            height: 1px
+            background: var(--border-color)
+            content: ''
+
+    &__link
+        position: relative
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        margin: 0 16px
+        padding: 0 16px
+        height: 25px
+        color: var(--secundary-contrast)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 13px
+
+        bgSkew()
+
+        &:after
+            background: var(--secundary)
+
+        &:hover
+            color: @color
+
+            &:after
+                @media media-min-lg
+                    background: var(--secundary-hover)
+
+        span
+            position: relative
+            z-index: 1

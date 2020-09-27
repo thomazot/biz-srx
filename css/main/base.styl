@@ -834,10 +834,6 @@ form.searchautocomplete
 .products__list img.active-img
     display: block
 
-.products__list .price-box > span:not(:last-child)
-    display: block
-    margin-bottom: .5rem
-
 .products .esgotado
     margin-bottom: 1rem
     color: color3_bg
@@ -1483,7 +1479,7 @@ form.searchautocomplete
     box-shadow: inset 0 -1px 0 color1_bg, inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 2rem - 1rem rgba(0, 0, 0, .5)
 
 .mycart:hover .mycart__content
-    display: block
+    display: flex
 
 .mycart__list
     overflow: auto
@@ -2683,30 +2679,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     max-width: none !important
     width: 100% !important
     height: 100% !important
-
-.banner--nojs .slide--youtube
-    overflow: visible
-
-.banner--nojs .slide__youtube
-    left: auto
-    padding: 56.25% 0 0
-    transform: none
-
-.banner--nojs img.d_img
-    display: block
-
-.banner--nojs img.m_img
-    display: none
-
-.banner--nojs .banner__wrapper
-    column-gap: 0
-    column-count: 3
-
-.banner--nojs .banner__item
-    display: block
-    overflow: hidden
-    break-inside: avoid-column
-    page-break-inside: avoid
 
 .banner:not(.banner--nojs) img.d_img
     position: absolute
@@ -9075,38 +9047,6 @@ table .change-product-link:hover
     .products__item
         flex: 1 1 100%
 
-    .products__case
-        display: flex
-        flex-flow: row nowrap
-
-    .product__header
-        flex: 0 0 40%
-        padding: 1rem 0 1rem 1rem
-
-    .product__main
-        display: block
-
-    .product__name
-        position: relative
-        overflow: hidden
-        height: 2.4rem
-        word-break: break-word
-        font-size: 1rem
-        line-height: 1.2rem
-
-    .product__name:after
-        position: absolute
-        right: 0
-        bottom: 0
-        display: block
-        width: 25%
-        height: 1.2rem
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff)
-        content: ''
-
-    .products .configurable-swatch-list, .products .price-box-avista, .products .price-box-parcelado
-        display: none
-
 /* ------ Menu de Categorias */
 /* ~1528px */
 @media (max-width: 95.5rem)
@@ -9467,20 +9407,11 @@ table .change-product-link:hover
         display: block !important
         width: 100%
 
-    .banner .owl-controls
-        display: none !important
-
-    .banner--nojs .banner__wrapper
-        column-count: 2
-
 /* ~568px */
 @media (max-width: 35.5rem)
     .slide__youtube
         padding: 100% 182% 0 0
         height: auto !important
-
-    .banner--nojs .banner__wrapper
-        column-count: 1
 
 /* ------ Modal */
 /* ~992px */
@@ -9544,11 +9475,6 @@ table .change-product-link:hover
     .owl-next
         right: 0
         left: auto
-
-/* ~992px */
-@media (max-width: 62rem)
-    .owl-buttons
-        display: none
 
 /* ------ Feed RSS */
 /* ~992px */
