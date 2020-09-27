@@ -1,0 +1,33 @@
+.breadcrumb
+    &__home
+        display: none
+
+    &__sep
+        font-size: 26px
+
+        &:before
+            color: var(--primary)
+            content: '|'
+
+        span
+            display: none
+
+    &__list
+        display: flex
+
+    &__link, &__last
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 26px
+
+    &__link
+        opacity: .5
+
+    &__item
+        &.last
+            order: -1
+
+    .li--0
+        &:nth-last-child(2)
+            display: none

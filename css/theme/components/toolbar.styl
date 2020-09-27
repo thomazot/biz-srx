@@ -1,0 +1,32 @@
+.toolbar
+    --border-color: #e5e5e5
+
+    .category-title + &, .search-title + &
+        .amount, .view-mode, .limiter, .sort-by label
+            display: none
+
+        .sorter, .sort-by
+            margin: 0
+
+        select
+            padding: 0 35px 0 10px
+            height: 35px
+            border: 0
+            border-radius: 3px
+            background: #f6f6f7 url(select) right 10px center no-repeat
+            box-shadow: none
+            color: var(--text)
+            font-weight: bold
+            font-size: 14px
+            appearance: none
+
+.toolbar-bottom
+    .toolbar
+        padding: 10px 0
+        border-top: solid 1px var(--border-color)
+        border-bottom: @border-top
+
+        .amount
+            color: #333333
+            font-weight: medium
+            font-size: 14px

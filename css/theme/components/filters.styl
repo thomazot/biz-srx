@@ -1,0 +1,98 @@
+.filters
+    --color: #333333
+    --border-color: #eaeaea
+
+    .title
+        @media media-min-lg
+            display: none
+
+    &.on
+        .title
+            @media media-max-lg
+                background: var(--primary-contrast)
+
+                &:before
+                    color: var(--secundary)
+
+    &__name
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+
+        &:after
+            display: block
+            width: 40px
+            height: 20px
+            background: no-repeat url(down) center center
+            content: ''
+
+    .a--0
+        color: var(--color)
+        font-weight: medium
+        font-size: 14px
+
+        .count
+            display: none
+
+        &:hover
+            @media media-min-lg
+                color: var(--primary)
+
+    &__filter
+        padding: 0
+        box-shadow: none
+
+        &:hover
+            box-shadow: none
+
+        &.category
+            > .filters__name, .count
+                display: none
+
+            .a--0, .a--0current
+                display: flex
+                justify-content: space-between
+                align-items: center
+                color: var(--secundary)
+                text-transform: uppercase
+                font-weight: bold
+                font-size: 14px
+
+                &:after
+                    display: block
+                    width: 40px
+                    height: 20px
+                    background: no-repeat url(down) center center
+                    content: ''
+
+            .a--1
+                color: var(--color)
+                font-weight: medium
+                font-size: 14px
+
+                &:hover
+                    @media media-min-lg
+                        color: var(--primary)
+
+            .ul--1
+                padding: 16px
+                border-bottom: solid 1px var(--border-color)
+
+                @media media-min-lg
+                    display: none
+
+                @media media-max-lg
+                    margin-bottom: 20px
+
+            .li--0
+                &:hover
+                    .ul--1
+                        display: block
+
+    &__list
+        @media media-max-lg
+            background: var(--primary-contrast)
