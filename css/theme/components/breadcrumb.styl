@@ -1,33 +1,58 @@
 .breadcrumb
-    &__home
-        display: none
-
-    &__sep
-        font-size: 26px
-
-        &:before
-            color: var(--primary)
-            content: '|'
-
-        span
-            display: none
-
-    &__list
-        display: flex
-
     &__link, &__last
-        color: var(--secundary)
+        color: var(--color)
         text-transform: uppercase
-        font-weight: bold
-        font-size: 26px
+        font-size: 13px
 
-    &__link
-        opacity: .5
+    &__home
+        .breadcrumb__link
+            &:before, span
+                display: none
 
-    &__item
-        &.last
-            order: -1
+            &:after
+                content: 'Home'
 
-    .li--0
-        &:nth-last-child(2)
+    .catalog-product-view &
+        container()
+
+        position: absolute
+        top: -27px
+        left: 50%
+        transform: translateX(-50%)
+
+        @media media-max-lg
             display: none
+
+    .catalog-category-view, .catalogsearch-result-index &
+        &__home
+            display: none
+
+        &__sep
+            font-size: 26px
+
+            &:before
+                color: var(--primary)
+                content: '|'
+
+            span
+                display: none
+
+        &__list
+            display: flex
+
+        &__link, &__last
+            color: var(--secundary)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 26px
+
+        &__link
+            opacity: .5
+
+        &__item
+            &.last
+                order: -1
+
+        .li--0
+            &:nth-last-child(2)
+                display: none

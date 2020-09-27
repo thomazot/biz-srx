@@ -1,0 +1,45 @@
+<div class="prod__img">
+    @fotos
+    @selos
+</div>
+<div class="prod__shop">	
+    <div class="col1">
+        <div class="prod__name">
+            <h1>@nome</h1>
+            <div class="sku">Cód. item @atributo(sku)</div>
+            @avaliacoes
+        </div>
+        <div class="prod__brand">marca: @marca</div>
+        <div class="prod__fabricante">Código Fabricante: XXXX</div>
+        <div class="prod__srx">Código SRX: XXXX</div>
+
+        @if(short_description)
+        <div class="prod__short-description">
+            @descricao(curta)
+        </div>
+        @endif(short_description)
+
+        @if(is_disponivel)
+            @variacoes
+        @endif(is_disponivel)
+    </div>
+    <div class="col2">
+        @if(is_disponivel)
+            <div class="prod__prices">
+                @preco
+                @preco(parcelado)
+                @preco(avista)
+            </div>
+
+            @bt(comprar)
+            @links
+            @compartilhar
+
+        @else(is_disponivel)		
+            <div class="prod__esgotado">
+                <div class="title title--sm">Produto Esgotado</div>
+                @alertas
+            </div>
+        @endif(is_disponivel)
+    </div>
+</div>

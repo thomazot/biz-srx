@@ -73,3 +73,27 @@ bgSkew()
         border-radius: 3px
         content: ''
         transform: skewX(-5deg)
+
+titleProduct()
+    position: relative
+    margin-top: 50px
+    padding: 28px 0 35px
+    color: #333333
+    text-align: center
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 26px
+
+    @media media-max-lg
+        font-size: 18px
+
+    &:before
+        position: absolute
+        top: 0
+        left: 50%
+        max-width: 100%
+        width: 100px
+        height: 5px
+        background: var(--primary)
+        content: ''
+        transform: translateX(-50%)

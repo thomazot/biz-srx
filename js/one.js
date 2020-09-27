@@ -1258,6 +1258,10 @@ $j.fn.neonTheme.custom = {
             selector: '.owl-prev',
             mode: 'html',
         },
+        'z-heart': {
+            selector: '.add-to-links .link-wishlist a',
+            mode: 'prepend',
+        },
     },
 }
 
