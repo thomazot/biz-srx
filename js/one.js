@@ -1262,6 +1262,18 @@ $j.fn.neonTheme.custom = {
             selector: '.add-to-links .link-wishlist a',
             mode: 'prepend',
         },
+        'z-close': {
+            selector: '.cart-table .btn-remove',
+            mode: 'html',
+        },
+        'z-truck': {
+            selector: '.cart__boxes .shipping > h2',
+            mode: 'prepend',
+        },
+        'z-cupon': {
+            selector: '.cart__boxes .coupon > .title',
+            mode: 'prepend',
+        },
     },
 }
 
@@ -1412,6 +1424,10 @@ $j(document)
                 mycartTotal.append(mycartQTD)
             }
         }
+
+        $('.coupon > .title').click(function () {
+            $(this).closest('.coupon').toggleClass('on')
+        })
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
