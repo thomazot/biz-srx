@@ -1,3 +1,5 @@
+old-price-color = #666666
+
 .price-box
     margin: 0
 
@@ -10,16 +12,26 @@
             font-weight: medium
             font-size: 16px
 
+            .prod__shop &
+                font-size: 32px
+
     .old-price
         margin: 0
 
         .label
             display: none
 
-        .price span
-            color: var(--secundary-hover)
-            font-weight: regular
-            font-size: 12px
+        .price
+            text-decoration: none
+
+            span
+                color: old-price-color
+                text-decoration: line-through
+                font-weight: regular
+                font-size: 12px
+
+                .prod__shop &
+                    font-size: 15px
 
 .price-box-parcelado
     .preco-parcelado
@@ -37,3 +49,39 @@
             text-transform: uppercase
             font-weight: medium
             font-size: 12px
+
+.price-box-avista
+    position: relative
+    display: block
+    padding-left: 22px
+    max-width: 190px
+    color: #333333
+    font-weight: regular
+    font-size: 12px
+
+    &:before
+        position: absolute
+        top: 2px
+        left: 0
+        display: block
+        order: -2
+        margin-right: 3px
+        width: 13px
+        height: 11px
+        background: no-repeat url(boleto) center center
+        content: ''
+
+    &:after
+        content: ' com desconto à vista no boleto'
+
+    .label
+        display: none
+
+    .price
+        flex: 0 0 auto
+        order: -1
+        color: var(--primary)
+
+        &:before
+            color: #333
+            content: ' ou '

@@ -1,0 +1,160 @@
+
+.catalog-product-view
+    --color: #333333
+    --text-color: #666666
+    --border-color: #e5e5e5
+
+    .main-container
+        max-width: none
+        width: auto
+
+        @media media-min-lg
+            margin-top: 35px
+            padding-top: 50px
+            border-top: solid 1px var(--border-color)
+
+        .col-main, .main
+            position: static
+
+        .main
+            container()
+
+.prod
+    &__name
+        h1
+            color: var(--color)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 18px
+
+        .sku
+            padding: 5px 0
+            color: var(--text-color)
+            text-transform: uppercase
+            font-weight: regular
+            font-size: 10px
+
+        .product-rate
+            padding-top: 5px
+            padding-bottom: 10px
+            border-bottom: solid 1px var(--border-color)
+
+            .to-rate
+                color: var(--text-color)
+                text-transform: uppercase
+                font-weight: regular
+                font-size: 10px
+                line-height: 16px
+
+    &__brand
+        display: flex
+        align-items: center
+        color: var(--text-color)
+        font-weight: regular
+        font-size: 14px
+        line-height: 1.5
+
+        .brand
+            padding-top: 0
+
+    &__fabricante, &__srx
+        color: var(--text-color)
+        font-weight: regular
+        font-size: 14px
+        line-height: 1.5
+
+    &__short-description
+        margin: 10px 0
+        padding: 10px 0
+        border-top: solid 1px var(--border-color)
+        border-bottom: @border-top
+        color: var(--text-color)
+        font-weight: regular
+        font-size: 14px
+
+    &__shop
+        @media media-min-lg
+            flex: 1 1 630px
+            min-width: 0
+
+        .qty-wrapper
+            display: none
+
+        .add-to-cart
+            margin-bottom: 0
+
+        .add-to-cart-btn
+            bgSkew()
+
+            padding: 0
+            padding: 0
+            height: 50px
+            background: none
+            box-shadow: none
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 32px
+            line-height: 1
+
+            &:after
+                background: var(--button)
+
+            &:hover
+                background: none
+
+                &:after
+                    background: var(--button-hover)
+
+            span
+                position: relative
+                z-index: 1
+
+        .col1, .col2
+            @media media-min-lg
+                flex: 1
+                min-width: 0
+
+        .col1
+            @media media-min-lg
+                margin-left: 20px
+                padding-right: 32px
+
+        .col2
+            @media media-min-lg
+                margin-left: 0
+                padding-left: 32px
+                border-left: solid 1px var(--border-color)
+
+    &__img
+        @media media-min-lg
+            flex: 0 1 575px
+            margin-right: 0
+
+        .product-image-container
+            @media media-min-lg
+                display: flex
+
+            .product-image
+                @media media-min-lg
+                    flex: 1
+                    min-width: 0
+
+            .more-views
+                @media media-min-lg
+                    order: -1
+                    margin-right: 20px
+                    width: 75px
+
+                .product-image-thumbs
+                    @media media-min-lg
+                        display: block
+
+    &__title
+        titleProduct()
+
+.product-collateral
+    [class*=__title]
+        titleProduct()
+
+    .related__subtitle, .related__add-checkbox
+        display: none

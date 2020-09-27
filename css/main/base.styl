@@ -3361,12 +3361,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     align-items: center
     margin: 0 -.25rem -.5rem
 
-.sharing-links .list:before
-    margin: 0 .25rem .5rem
-    content: 'Compartilhar'
-    font-size: .8rem
-    opacity: .5
-
 .sharing-links li
     flex: 0 0 2rem
     margin: 0 .25rem .5rem
@@ -3378,28 +3372,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     width: 2rem
     height: 2rem
     border-radius: 3px
-    background: #3b5998
-
-.sharing-links a:hover
-    opacity: .8
-
-.sharing-links .tt-share a
-    background: #00aced
-
-.sharing-links .gp-share a
-    background: #dd4b39
-
-.sharing-links .wa-share a
-    background: #4dc247
-
-.sharing-links .pt-share a
-    background: #cb2027
-
-.sharing-links .tb-share a
-    background: #32506d
-
-.sharing-links .lk-share a
-    background: #007bb5
 
 .sharing-links .email-to-friend a
     background: color1_bg
@@ -3448,25 +3420,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .add-to-cart-btn.no-qty
     padding: 0 1rem
-
-/* @links */
-.add-to-links li:not(:last-child)
-    margin-bottom: .25rem
-
-.add-to-links a
-    display: block
-    padding: .5rem
-    border-radius: 3px
-    background: #fff
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)
-    color: rgba(0, 0, 0, .7)
-    text-align: center
-    font-weight: 600
-    font-size: .8rem
-
-.add-to-links a:hover
-    background: color1_bg
-    color: color1_font
 
 /* @fotos */
 .product-image-gallery
@@ -3864,9 +3817,6 @@ body.safari .product-image-thumbs .thumb-link
     flex: 0 0 16rem
     order: 2
     margin-left: 2rem
-
-.prod__shop .col1 > *, .prod__shop .col2 > *
-    margin-bottom: 1rem
 
 .prod__shop .col1 > *:last-child, .prod__shop .col2 > *:last-child
     margin-bottom: 0
@@ -4535,7 +4485,6 @@ tr.bundle:before
 .reviews__list
     overflow: auto
     margin: 0 -1rem -1rem
-    min-height: 24rem
     max-height: 50vh
 
 .reviews__list::-webkit-scrollbar
@@ -9614,9 +9563,6 @@ table .change-product-link:hover
     .prod__shop
         flex: 1 1 50%
 
-    .prod__name h1
-        font-size: 2rem
-
     /* @parcelamento */
     .parcelamento .title
         display: block
@@ -9738,10 +9684,6 @@ table .change-product-link:hover
     .prod__img
         margin: 0 0 1rem
 
-    .product-image-gallery
-        margin-right: -1rem
-        margin-left: -1rem
-
     .catalog-product-view .breadcrumb
         display: none
 
@@ -9755,9 +9697,6 @@ table .change-product-link:hover
 
     .sharing-links li
         margin: 0
-
-    .sharing-links .list:before
-        display: none
 
     /* .tabs */
     .tabs
@@ -9802,50 +9741,6 @@ table .change-product-link:hover
         transform: translateX(0)
 
     .tabs__hide
-        display: block
-        margin: -1rem -1rem 1rem
-        border-radius: 0
-
-    /* Produto
-     * @relacionados
-     * @recomendados
-     * @quemviu
-     * @compre-junto
-     * @vendas-acima
-     */
-    .related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        background: #fff
-        font-weight: 700
-        font-size: 1rem
-        cursor: pointer
-
-    .related__title:after, .recommended__title:after, .whosaw__title:after, .jointsales__title:after, .upsell__title:after
-        icon('\f105')
-
-        margin-left: auto
-
-    .related__content, .recommended__content, .whosaw__content, .jointsales__content, .upsell__content
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 999
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateX(100%)
-
-    .related.on .related__content, .recommended.on .recommended__content, .whosaw.on .whosaw__content, .jointsales.on .jointsales__content, .upsell.on .upsell__content
-        transform: translateX(0)
-
-    .related__hide, .recommended__hide, .whosaw__hide, .jointsales__hide, .upsell__hide
         display: block
         margin: -1rem -1rem 1rem
         border-radius: 0
@@ -9897,42 +9792,8 @@ table .change-product-link:hover
         width: 100%
 
     /* avaliacoes(form) */
-    .reviews .subtitle
-        border-top: 1px solid rgba(0, 0, 0, .1)
-        text-align: center
-        opacity: .5
-
-    .reviews__title
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        background: #fff
-        font-weight: 400
-        font-size: 1rem
-
-    .reviews__title:after
-        icon('\f123')
-
-        margin-left: auto
-
     .reviews__content
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 999
         display: block
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateX(100%)
-
-    .reviews.on .reviews__content
-        transform: translateX(0)
 
     .reviews__resume, .reviews__ratings, .reviews__add
         margin: 0
@@ -9949,11 +9810,6 @@ table .change-product-link:hover
     .reviews__no-reviews
         padding: 0
 
-    .reviews__hide
-        display: block
-        margin: -1rem -1rem 1rem
-        border-radius: 0
-
     /* @parcelamento & @simulador-frete */
     .parcelamento .title
         margin-right: -1rem
@@ -9964,40 +9820,6 @@ table .change-product-link:hover
         margin-right: -1rem
         margin-left: -1rem
         border-width: 0 0 1px
-
-    /* @links */
-    .add-to-links
-        margin: 0 !important
-
-    .add-to-links li:not(:last-child)
-        margin: 0
-
-    .add-to-links a
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        box-shadow: none
-        text-align: left
-        font-weight: 400
-        font-size: 1rem
-        line-height: 1em
-
-    .add-to-links li:first-child a
-        border-top: 1px solid rgba(0, 0, 0, .1)
-
-    .add-to-links a:after
-        margin-left: auto
-
-    .add-to-links .link-wishlist a:after
-        display: inline
-
-        icon('\f004')
-
-    .add-to-links .link-compare a:after
-        content: '\f012'
 
     /* Empacotado */
     .bundle
