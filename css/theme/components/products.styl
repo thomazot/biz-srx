@@ -1,0 +1,66 @@
+.products
+    &.carrossel
+        .owl-wrapper-outer
+            box-sizing: content-box
+            padding-top: 10px
+            padding-bottom: 10px
+
+    &__title
+        padding: 45px 0 25px
+        text-align: center
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 26px
+
+    &__case
+        padding: 10px
+        box-shadow: none
+
+        &:hover
+            @media media-min-lg
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1)
+
+    &__name
+        display: block
+        padding-bottom: 10px
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+
+    &__actions
+        @media media-min-lg
+            visibility: hidden
+            opacity: 0
+            transition: all .2s ease-in-out
+            transform: translateY(10px)
+
+            .products__case:hover &
+                visibility: visible
+                opacity: 1
+                transform: translateY(0)
+
+        .button
+            bgSkew()
+
+            position: relative
+            width: 100%
+            background: none
+            box-shadow: none
+            color: var(--primary-contrast)
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-weight: bold
+            font-size: 14px
+
+            &:after
+                background: var(--primary)
+
+            &:hover
+                &:after
+                    @media media-min-lg
+                        background: var(--primary-hover)
+
+            span
+                position: relative
+                z-index: 1

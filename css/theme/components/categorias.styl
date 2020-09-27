@@ -1,0 +1,63 @@
+.categorias
+    --border-color: #e5e5e5
+    --color: #999999
+
+    &
+        margin-bottom: 50px !important
+
+    .categories
+        background: none
+
+    &__title
+        padding: 45px 0 25px
+        text-align: center
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 26px
+
+    .ul--0
+        flex-flow: row wrap
+
+    .li--0
+        flex: 1 1 140px
+        min-width: 0
+
+        &.removed
+            position: static !important
+
+        &:hover
+            .a--0
+                background: #fff
+
+            img
+                @media media-min-lg
+                    transform: scale(1.1)
+
+    .a--0
+        display: block
+        padding-top: 45px
+        height: auto
+        background: #ffffff
+        box-shadow: 0 0 0 1px var(--border-color)
+
+        img
+            margin: 0
+            max-height: none
+            height: 100px
+            transition: all .2s ease-in-out
+            transform: scale(1)
+            object-fit: contain
+
+        span
+            display: block
+            overflow: hidden
+            padding-top: 35px
+            padding-bottom: 16px
+            color: var(--color)
+            text-align: center
+            text-transform: uppercase
+            text-overflow: ellipsis
+            white-space: nowrap
+            font-weight: bold
+            font-size: 13px
+            line-height: 1

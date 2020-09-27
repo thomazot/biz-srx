@@ -1,4 +1,21 @@
 .logo
     .header &
+        padding-right: 16px
+
+        @media media-min-sm
+            padding: 10px 0
+
         img, svg
-            height: 48px
+            max-height: 70px
+            height: 70px
+            transition: all .2s linear
+
+            .scrolling &
+                @media media-min-lg
+                    max-height: 50px
+
+    .footer &
+        display: inline-block
+
+        img, svg
+            height: 59px

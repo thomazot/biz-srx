@@ -1,4 +1,29 @@
 .header
+    padding: 10px 0
+
+    @media media-min-lg
+        position: static
+
     &-container
         position: sticky
         top: 0
+
+    .menu-filter
+        @media media-min-lg
+            align-self: flex-end
+            margin-left: 15px
+
+    .search, .myaccount, .mycart
+        @media media-max-lg
+            margin-left: 2px
+
+    .search
+        @media media-max-sm
+            margin-left: auto
+
+    .myaccount
+        @media media-min-sm
+            margin-left: 10px
+
+        @media media-min-lg
+            margin-left: 30px

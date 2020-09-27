@@ -1,0 +1,189 @@
+.mycart
+    --color: #555555
+    --background: #f9f9f9
+
+    &.on
+        z-index: 30
+
+    &__header
+        color: var(--secundary)
+
+        @media media-min-lg
+            width: 120px
+
+        .qtd
+            display: none
+
+        .ico
+            width: 39px
+            height: 30px
+
+        a
+            display: flex
+            align-items: center
+            padding: 15px 0
+            color: currentColor
+            line-height: 1
+
+            @media media-max-lg
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 48px
+                height: 48px
+                border-radius: 3px
+                background: var(--secundary)
+                color: var(--secundary-contrast)
+
+                .ico
+                    width: 25px
+                    height: 25px
+
+        .label
+            margin-left: 10px
+            font-size: 13px
+
+            @media media-max-lg
+                display: none
+
+            strong
+                font-size: 16px
+
+    &__content
+        flex-flow: column nowrap
+        padding: 20px 16px !important
+
+        .title
+            text-transform: uppercase
+            font-size: 14px
+
+        .std
+            font-size: 12px
+
+        @media media-max-lg
+            display: none
+
+        @media media-min-lg
+            visibility: hidden
+            overflow: visible
+            padding: 30px
+            width: 340px
+            box-shadow: inset 0 3px 0 var(--primary), inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 1rem rgba(0, 0, 0, .5)
+            opacity: 0
+            transition: all .2s ease-in-out
+
+            .mycart:hover &
+                visibility: visible
+                opacity: 1
+
+            &:before
+                position: absolute
+                bottom: 100%
+                left: 50%
+                margin-left: 62px
+                border-right: solid 8px transparent
+                border-bottom: solid 8px var(--primary)
+                border-left: solid 8px transparent
+                content: ''
+
+    &__qtd, &__remove
+        display: none
+
+    &__list
+        margin: 0
+        padding: 0
+
+    &__item
+        border: 0
+
+    &__totals
+        display: flex
+        order: -2
+        justify-content: space-between
+        align-items: center
+
+        .title, .price-box-avista
+            display: none
+
+        .regular-price
+            color: var(--secundary)
+            font-weight: bold
+            font-size: 14px
+
+            &:before
+                content: 'Subtotal: '
+
+            .label
+                display: none
+
+            .price
+                color: var(--primary)
+
+        .qtd
+            color: var(--primary)
+            font-weight: bold
+            font-size: 14px
+
+            span
+                margin-left: 3px
+                color: var(--secundary)
+
+    &__actions
+        display: contents
+
+        .editar
+            display: flex
+            flex: 0 0 auto
+            order: -1
+            justify-content: center
+            align-items: center
+            margin: 16px 0 0
+            padding: 0
+            height: 32px
+            background: var(--background)
+            color: var(--color)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 14px
+
+            &:before
+                content: 'Editar compra'
+
+            span
+                display: none
+
+        .finalizar
+            bgSkew()
+
+            position: relative
+            color: var(--primary-contrast)
+            text-align: center
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 16px
+
+            &:after
+                background: var(--primary)
+
+            &:hover
+                background: none
+
+            span
+                position: relative
+                z-index: 1
+
+    &__name
+        margin-bottom: 0
+        color: var(--secundary)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+
+        a
+            color: currentColor
+
+    &__details
+        .price
+            color: var(--primary)
+            font-weight: bold
+            font-size: 18px

@@ -1,0 +1,18 @@
+<div class="marcas">
+    <div class="marcas__container">
+        <div class="marcas__header">
+            <h3 class="marcas__title">Principais Marcas</h3>
+        </div>
+        <div class="marcas__main">
+            {{widget type="shopbybrand/widget" template="shopbybrand/widget.phtml" identificador="marcas" exibicao="lista" markup="<a href='@url-marca'>
+@imagem-marca(180x80)
+<span>@nome-marca</span>
+</a>"}}
+        </div>
+        <div class="marcas__footer">
+            <a href="#" class="marcas__link">
+                <span>Ver todas</span>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.newsletter
+    padding: 120px 0
+    background-image: url(news)
+    background-size: cover
+    background-repeat: no-repeat
+    text-align: center
+
+    &__form
+        margin: 0 auto
+        max-width: 'calc(100% - %s)' % gap
+        width: 455px
+
+        input
+            height: 30px
+
+    &__email, &__name
+        @media media-min-lg
+            flex: 1
+            min-width: 0
+
+    &__submit
+        flex: 0 0 100%
+        padding: 10px 4px 4px
+
+    &__btn
+        bgSkew()
+
+        position: relative
+        padding: 0
+        width: 110px
+        height: 28px
+        background: none
+        box-shadow: none
+        text-transform: uppercase
+        font-weight: regular
+        font-size: 13px
+
+        span
+            position: relative
+            z-index: 1
+            line-height: 1
+
+        &:after
+            background: var(--primary)
+
+    &__text
+        color: var(--primary-contrast)
+        font-size: 18px
+        line-height: 1
+
+        p
+            margin: 0
+            line-height: 1

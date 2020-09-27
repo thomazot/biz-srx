@@ -1,62 +1,68 @@
-@media media-max-lg
-    .categories
-        .parent
-            position: relative
+.header
+    @media media-max-lg
+        .categories
+            &__show
+                order: -1
+                margin-right: 10px
 
-            > ul
-                display: none
-
-            &:after
-                content: ''
-
-            > a
-                display: flex
-                justify-content: flex-start
-                align-items: center
-                min-height: 48px
-
-            &:after
-                icon('\f054')
-
-                position: absolute
-                top: 0
-                right: 0
-                z-index: 10
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 48px
-                height: 48px
-                background: var(--primary-contrast)
-                font-size: 20px
-                transition: all .2s ease
-
-            &.on
-                &:after
-                    transform: rotate(90deg)
+            .parent
+                position: relative
 
                 > ul
-                    display: block
+                    display: none
 
-        .all-li--0
-            padding-bottom: 0
+                &:after
+                    content: ''
 
-@media media-min-lg
-    .categories
-        flex: 1
-        margin-bottom: 0 !important
-        min-width: 0
-        background: none
+                > a
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    min-height: 48px
 
-        .a--0
-            color: var(--primary)
-            text-transform: uppercase
-            white-space: nowrap
-            font-weight: semibold
-            font-size: 14px
+                &:after
+                    icon('\f054')
 
-        .li--0
-            order: 1
+                    position: absolute
+                    top: 0
+                    right: 0
+                    z-index: 10
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 48px
+                    height: 48px
+                    background: var(--primary-contrast)
+                    font-size: 20px
+                    transition: all .2s ease
 
-        &__all
-            order: 2
+                &.on
+                    &:after
+                        transform: rotate(90deg)
+
+                    > ul
+                        display: block
+
+            .all-li--0
+                padding-bottom: 0
+
+    @media media-min-lg
+        .categories
+            flex: 1
+            margin-bottom: 0 !important
+            margin-left: 16px
+            min-width: 255px
+            background: none
+
+            .a--0
+                color: var(--primary)
+                text-transform: lowercase
+                white-space: nowrap
+                font-weight: bold
+                font-size: 14px
+
+            .li--0
+                order: 1
+
+            &__all
+                display: none

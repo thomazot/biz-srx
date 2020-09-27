@@ -16,16 +16,16 @@ icon(i)
 /**
  * Mixin - Font-weight
  */
-font = 'Mukta', sans-serif
+font = 'Jura', sans-serif
 light = 300
 regular = 400
 medium = 500
-semibold = 600
+semi-bold = 600
 bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 980px
+viewport = 1200px
 gap = 32px
 /**
  * Mixin - Responsive
@@ -62,3 +62,14 @@ shadowBorder()
 
     @media media-max-lg
         box-shadow: 300px 0 0 @background, -300px 0 0 @background
+
+bgSkew()
+    &:after
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 3px
+        content: ''
+        transform: skewX(-5deg)

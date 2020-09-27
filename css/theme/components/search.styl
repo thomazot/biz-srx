@@ -1,0 +1,49 @@
+.search
+    &__hide
+        height: 70px
+        line-height: 40px
+
+    &__form
+        @media media-min-sm
+            bgSkew()
+
+            &:after
+                z-index: -1
+                background: var(--gray)
+
+    &__button
+        width: 48px
+        height: 48px
+        border-radius: 4px
+
+        @media media-max-sm
+            background: var(--secundary)
+            color: var(--secundary-contrast)
+
+        @media media-min-sm
+            background: none
+            box-shadow: none
+            color: var(--secundary)
+
+            svg
+                width: 18px
+                height: 18px
+                fill: currentColor !important
+
+            &:hover
+                background: none
+                color: var(--secundary)
+
+    input[type=search]&__input
+        border: 0
+        background: none
+        box-shadow: none
+
+        &:focus::placeholder
+            color: transparent
+
+    .header &.on
+        .search__input
+            @media media-max-sm
+                height: 72px
+                border-radius: 0 !important
