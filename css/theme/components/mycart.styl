@@ -100,13 +100,17 @@
     &__item
         border: 0
 
+    &__hide
+        order: -3
+        margin-top: -20px
+
     &__totals
         display: flex
         order: -2
         justify-content: space-between
         align-items: center
 
-        .title, .price-box-avista
+        .title, .price-box-avista, .price-box-parcelado
             display: none
 
         .regular-price
@@ -160,6 +164,10 @@
             bgSkew()
 
             position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 50px
             color: var(--primary-contrast)
             text-align: center
             text-transform: uppercase
