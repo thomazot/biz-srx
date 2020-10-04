@@ -10,8 +10,14 @@
             @avaliacoes
         </div>
         <div class="prod__brand">marca: @marca</div>
-        <div class="prod__fabricante">Código Fabricante: XXXX</div>
-        <div class="prod__srx">Código SRX: XXXX</div>
+        
+        @if(codigo_fabricante)
+        <div class="prod__fabricante">Código Fabricante: @atributo(codigo_fabricante)</div>
+        @endif(codigo_fabricante)
+
+        @if(codigo_srx)
+        <div class="prod__srx">Código SRX: @atributo(codigo_srx)</div>
+        @endif(codigo_srx)
 
         @if(short_description)
         <div class="prod__short-description">
@@ -29,6 +35,12 @@
                 @preco
                 @preco(parcelado)
                 @preco(avista)
+            </div>
+
+            <div class="prod__estoque">
+                <div class="prod__msg">
+                    produto em estoque
+                </div>
             </div>
 
             @bt(comprar)

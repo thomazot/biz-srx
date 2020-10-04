@@ -1,0 +1,193 @@
+.jointsales
+    &__row
+        padding: 0
+
+        @media media-min-lg
+            flex-wrap: nowrap
+            align-items: center
+
+    &__currentin, .owl-wrapper-outer
+        border: 0
+        box-shadow: none
+
+    &__currentin
+        padding: 0
+
+        @media media-max-sm
+            padding-bottom: 40px
+
+        @media media-min-sm
+            padding-right: 40px
+
+    &__current
+        @media media-max-sm
+            margin-bottom: 40px
+
+        @media media-min-sm
+            flex: 0 0 50%
+            margin-right: 40px
+
+        @media media-min-lg
+            flex: 0 0 40%
+            padding-bottom: 0
+
+    &__list
+        @media media-min-sm
+            flex: 1 !important
+            min-width: 0
+
+        @media media-min-lg
+            align-self: center
+
+    &__current, &__item
+        align-items: center
+
+        .thumb
+            flex: 0 0 30%
+            margin: 0
+            padding: 0
+
+        .title
+            color: var(--secundary)
+            text-transform: uppercase
+            font-size: 14px
+
+    &__item
+        display: flex
+        flex: 1
+        max-width: none
+
+    &__totals, &__payments, &__action
+        align-self: flex-start
+
+    &__payments
+        order: 0
+        margin-top: 10px
+
+        @media media-max-sm
+            margin-right: auto
+            margin-left: auto
+
+        .avista
+            display: none
+
+        .preco-parcelado
+            color: var(--secundary)
+            text-transform: uppercase
+            font-size: 12px
+
+            .s-juros
+                padding: 0
+                background: none
+                color: var(--secundary)
+                font-style: normal
+
+    &__action
+        order: 2
+
+        @media media-max-sm
+            margin-right: auto
+            margin-left: auto
+
+        .btn
+            bgSkew()
+
+            position: relative
+            margin: 0 5px
+            padding: 0 10px
+            height: 35px
+            background: none
+            box-shadow: none
+            text-transform: uppercase
+            font-size: 18px
+
+            &:after
+                background: var(--primary)
+
+            span
+                position: relative
+                z-index: 1
+
+    &__totals
+        position: relative
+        display: flex
+        flex: 1 1 50%
+        flex-flow: column nowrap
+        align-items: flex-start
+        min-width: 0
+
+        @media media-max-sm
+            align-items: center
+            margin-top: 0
+            padding-top: 50px
+            text-align: center
+
+        @media media-min-lg
+            flex: 0 0 auto
+            margin-top: 0
+            min-width: 0
+
+        .todos-juntos
+            order: 0
+            font-size: 0
+
+            .price
+                color: #666666
+                text-decoration: line-through
+                font-weight: regular
+                font-size: 15px
+
+        .comprando-junto
+            order: 0
+            font-size: 0
+
+            .price
+                color: var(--primary)
+                font-weight: bold
+                font-size: 32px
+
+        .economize
+            order: 1
+            padding: 10px 0 0
+            background: none
+            font-size: 0
+
+            .price
+                display: block
+                max-width: 130px
+                color: #01a715
+                font-weight: regular
+                font-size: 12px
+                line-height: 1
+
+                &:before
+                    margin-right: 3px
+                    content: 'comprando junto você economiza'
+
+    .more
+        color: var(--primary)
+        transform: none
+
+        .ico
+            width: 18px
+            height: 18px
+            fill: currentColor
+
+        &:before
+            display: none
+
+    .z-equal
+        position: absolute
+        width: 18px
+        height: 11px
+        fill: var(--primary)
+
+        @media media-max-sm
+            top: 20px
+            left: 50%
+            margin-left: -9px
+
+        @media media-min-lg
+            top: 50%
+            left: -40px
+            margin-top: -5px

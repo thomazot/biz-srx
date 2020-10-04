@@ -126,9 +126,14 @@
                 border-left: solid 1px var(--border-color)
 
     &__img
+        min-width: 0
+
         @media media-min-lg
             flex: 0 1 575px
             margin-right: 0
+
+        .more-views
+            max-width: 100%
 
         .product-image-container
             @media media-min-lg
@@ -151,6 +156,18 @@
 
     &__title
         titleProduct()
+
+    &__estoque
+        padding: 25px 0
+        border-top: solid 1px var(--border-color)
+
+    &__msg
+        padding: 8px 15px
+        border-radius: 3px
+        background: #f6f6f7
+        color: #333333
+        font-weight: semi-bold
+        font-size: 14px
 
 .product-collateral
     [class*=__title]

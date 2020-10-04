@@ -1274,6 +1274,10 @@ $j.fn.neonTheme.custom = {
             selector: '.cart__boxes .coupon > .title',
             mode: 'prepend',
         },
+        'z-more': {
+            selector: '.jointsales .more',
+            mode: 'html',
+        },
     },
 }
 
@@ -1428,6 +1432,46 @@ $j(document)
         $('.coupon > .title').click(function () {
             $(this).closest('.coupon').toggleClass('on')
         })
+
+        var thumbs = $('.product-image-thumbs')
+
+        if (thumbs.length) {
+            thumbs.slick({
+                vertical: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                prevArrow:
+                    '<button type="button" class="slick-prev"><svg class="ico z-prev"><use xlink:href="#z-prev" /></svg></button>',
+                nextArrow:
+                    '<button type="button" class="slick-next"><svg class="ico z-next"><use xlink:href="#z-next" /></svg></button>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            vertical: false,
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        },
+                    },
+                ],
+            })
+        }
+
+        var joinTotals = $('.jointsales__totals')
+
+        if (joinTotals.length) {
+            joinTotals.each(function () {
+                var row = $(this).closest('.jointsales__row')
+                var payment = $(row).find('.jointsales__payments')
+                var action = $(row).find('.jointsales__action')
+
+                $(this).append(payment).append(action)
+
+                $(this).prepend(
+                    '<svg class="ico z-equal"><use xlink:href="#z-equal" /></svg>'
+                )
+            })
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
